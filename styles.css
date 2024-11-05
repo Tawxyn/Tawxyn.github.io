@@ -331,6 +331,7 @@ textarea {
 	background: var(--background-color);
 	color: var(--text-color);
 	line-height: normal;
+	appearance: none;
 	-webkit-font-smoothing: inherit;
 	-moz-osx-font-smoothing: inherit;
 	-webkit-appearance: none;
