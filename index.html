@@ -1,110 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike Oleshchuk | Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mike Oleshchuk | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head> 
-<body>
+<body class="night">
 
-    <main class="fade-in-container">
+  <header class="fade-in navbar-container">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="books.html">Favorite Books</a></li>
+        <li><a href="devblog.html">Devblog</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">☀️</button>
+    </nav>
+  </header>
 
-        <section class="bio-section fade-in">
-            <div class="bio-text">
-                <h1>Mike Oleshchuk</h1>
-                <p class="title">CS Student @ Sac State /p>
-                <p>Hello! I'm a developer/learner/terminal-enjoyer studying Computer Science.</p>
-                <p>I love building unique user experiences, open-source development and cli applications.</p>
+  <main class="fade-in-container">
+
+    <section class="bio-section">
+      <div class="bio-text">
+        <h1 class="fade-in-name">Mike Oleshchuk</h1>
+        <p class="title fade-in-name">CS Student @ Sac State</p>
+        <p class="fade-in">Hello! I'm a developer/learner/terminal-enjoyer studying Computer Science.</p>
+        <p class="fade-in">I love tackling unique problems and collaborating with others.</p>
+      </div>
+      <div class="profile-photo fade-in" aria-hidden="true">
+        <img src="me1.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="experience-section fade-in">
+      <h2>Where I've Been</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="logo"><img src="synergex.png" alt=""></div>
+          <div class="details">
+            <span class="company">Synergex</span>
+            <div class="title-date">
+              <span class="role">Software Engineering Intern</span>
+              <span class="date">Fall 2025</span>
             </div>
-            <div class="profile-photo">
-                <img src="pp.jpg" alt="ME!">
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="logo"><img src="synergex.png" alt=""></div>
+          <div class="details">
+            <span class="company">Synergex</span>
+            <div class="title-date">
+              <span class="role">Software Engineering Intern</span>
+              <span class="date">Summer 2025</span>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <section class="experience-section fade-in">
-            <h2>Where I've Been</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="logo">
-                        <img src="synergex.png" alt="Synergex logo">
-                    </div>
-                    <div class="details">
-                        <div class="title-date">
-                            <span class="company">Synergex</span>
-                            <span class="date">Fall 2025</span>
-                        </div>
-                        <p class="role">Software Engineering Intern</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="logo">
-                        <img src="synergex.png" alt="Synergex logo">
-                    </div>
-                    <div class="details">
-                        <div class="title-date">
-                            <span class="company">Synergex</span>
-                            <span class="date">Summer 2025</span>
-                        </div>
-                        <p class="role">Software Engineering Intern</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="logo">
-                        <img src="el-cerrito-seal.png" alt="El Cerrito logo">
-                    </div>
-                    <div class="details">
-                        <div class="title-date">
-                            <span class="company">El Cerrito Information Technology</span>
-                            <span class="date">Summer 2025</span>
-                        </div>
-                        <p class="role">Software Engineering Intern</p>
-                    </div>
-                </div>
+        <div class="timeline-item">
+          <div class="logo"><img src="el-cerrito-seal.png" alt=""></div>
+          <div class="details">
+            <span class="company">El Cerrito Information Technology</span>
+            <div class="title-date">
+              <span class="role">Software Engineering Intern</span>
+              <span class="date">Fall 2024</span>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <hr class="section-divider">
+      </div>
+    </section>
 
-        <section class="education-section fade-in">
-            <div class="timeline-item">
-                <div class="logo">
-                    <img src="Sac-State.png" alt="Sac State logo">
-                </div>
-                <div class="details">
-                    <div class="title-date">
-                        <span class="company">Sacramento State University</span>
-                        <span class="date">22025</span>
-                    </div>
-                    <p class="role">B.S. Computer Science</p>
-                </div>
-            </div>
-        </section>
-            <section class="education-section fade-in">
-                <div class="timeline-item">
-                    <div class="logo">
-                        <!-- Replace with actual Georgia Tech logo if available -->
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Georgia_Tech_Yellow_Jackets_logo.svg" alt="Georgia Tech logo" style="height:48px;">
-                    </div>
-                    <div class="details">
-                        <div class="title-date">
-                            <span class="company">Georgia Institute of Technology</span>
-                            <span class="date">TBD</span>
-                        </div>
-                        <p class="role">M.S. Computer Science (Planned)</p>
-                    </div>
-                </div>
-            </section>
-        
-    </main>
-    
-    <script>
-        window.addEventListener('load', () => {
-            document.querySelector('.fade-in-container').classList.add('loaded');
-        });
-    </script>
+    <div class="section-divider-wrapper">
+      <hr class="section-divider" />
+    </div>
+
+    <section class="education-section fade-in">
+      <div class="timeline-item">
+        <div class="logo"><img src="Sac-State.png" alt=""></div>
+        <div class="details">
+          <span class="company">Sacramento State University</span>
+          <div class="title-date">
+            <span class="role">B.S. Computer Science</span>
+            <span class="date">2025</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education-section fade-in">
+      <div class="timeline-item">
+        <div class="logo"><img src="Georgia-Tech.png" alt="" style="height:48px"></div>
+        <div class="details">
+          <span class="company">Georgia Institute of Technology</span>
+          <div class="title-date">
+            <span class="role">Online M.S. Computer Science</span>
+            <span class="date">Start 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rule">
+      <span class="line"></span>
+      <span class="center"><span class="chev left">‹‹</span><span class="star">✷</span><span class="chev right">››</span></span>
+      <span class="line"></span>
+    </section>
+
+    <section class="ascii-wave fade-in" aria-hidden="true">
+      <pre id="wave"></pre>
+    </section>
+
+    <section class="spinner-row fade-in" aria-hidden="true">
+      <code id="spinner" class="spinner">|</code>
+    </section>
+
+    <section class="rule">
+      <span class="line"></span>
+      <span class="center"><span class="chev left">‹‹</span><span class="star">✷</span><span class="chev right">››</span></span>
+      <span class="line"></span>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <ul class="footer-links">
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="books.html">Favorite Books</a></li>
+        <li><a href="devblog.html">Devblog</a></li>
+        <li class="sep">•</li>
+        <li>
+          <a href="https://www.linkedin.com/in/oleshchukmike/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.84-2.2 3.8-2.2 4.06 0 4.81 2.67 4.81 6.14V24h-4v-7.1c0-1.69-.03-3.86-2.35-3.86-2.36 0-2.72 1.84-2.72 3.74V24h-4V8z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/MikeOleshchuk" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2H21.5l-7.6 8.69L22.5 22h-5.93l-4.64-5.4L6.5 22H3.244l8.14-9.327L2.5 2h6.07l4.2 4.9L18.244 2Zm-2.08 18h1.44L7.92 4h-1.5l9.744 16Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Tawxyn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.24c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.31-5.48-1.33-5.48-5.9 0-1.3.47-2.37 1.24-3.2-.12-.31-.54-1.56.12-3.26 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.28-1.54 3.29-1.22 3.29-1.22.66 1.7.24 2.95.12 3.26.77.83 1.23 1.9 1.23 3.2 0 4.58-2.81 5.59-5.49 5.89.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+  
+  <script>
+    // Fade in
+    window.addEventListener('load', () => {
+        document.querySelector('.navbar-container')?.classList.add('loaded');
+        document.querySelectorAll('.fade-in-name').forEach((el, i) =>
+            setTimeout(() => el.classList.add('loaded'), i * 200)
+        );
+        document.querySelectorAll('.fade-in:not(.fade-in-name)').forEach((el, i) =>
+            setTimeout(() => el.classList.add('loaded'), 500 + i * 150)
+        );
+    });
+
+    // Theme toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('day');
+      document.body.classList.toggle('night');
+      toggleBtn.textContent = document.body.classList.contains('day') ? '🌙' : '☀️';
+    });
+
+    // Small spinning stick
+    (function(){
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+      const spinner = document.getElementById('spinner');
+      if (!spinner) return;
+      const frames = ['|','/','—','\\'];
+      let i = 0;
+      setInterval(() => { spinner.textContent = frames[i = (i+1) % frames.length]; }, 120);
+    })();
+
+    (function () {
+      const pre = document.getElementById('wave');
+      if (!pre) return;
+
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let cols = 60, rows = 6; 
+      let t = 0;
+
+      function resize() {
+        const w = pre.clientWidth || pre.parentElement.clientWidth || 700;
+        cols = Math.max(40, Math.min(100, Math.round(w / 10)));
+        rows = 6;
+      }
+
+      function draw() {
+        let out = [];
+        const amp = 2, k = 0.25, speed = 0.2;
+        for (let y = 0; y < rows; y++) {
+          let line = '';
+          for (let x = 0; x < cols; x++) {
+            const s = Math.sin((x * k) + (t * speed)) * amp + amp;
+            line += Math.abs(y - s) < 0.3 ? '~' : ' ';
+          }
+          out.push(line);
+        }
+        pre.textContent = out.join('\n');
+        if (!reduce) t += 1;
+      }
+
+      function loop() {
+        draw();
+        if (!reduce) requestAnimationFrame(loop);
+      }
+
+      window.addEventListener('resize', () => { resize(); draw(); });
+      resize(); draw();
+      if (!reduce) requestAnimationFrame(loop);
+    })();
+  </script>
 </body>
 </html>
