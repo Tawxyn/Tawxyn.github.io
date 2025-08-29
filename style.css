@@ -17,6 +17,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+body.night .title { color: #ffffff !important; }
+
 body, p, h1, h2, .timeline-item, .details, .company, .title-date, .bio-text, .title {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 300;
