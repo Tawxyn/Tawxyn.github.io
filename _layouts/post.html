@@ -1,0 +1,22 @@
+---
+layout: base
+---
+<section class="bio-section">
+  <div class="bio-text">
+    <h1 class="fade-in-name">{{ page.title }}</h1>
+    <p class="title fade-in-name">{{ page.date | date: "%B %-d, %Y" }}</p>
+    {% if page.description %}<p class="fade-in">{{ page.description }}</p>{% endif %}
+  </div>
+</section>
+
+<div class="section-divider-wrapper"><hr class="section-divider" /></div>
+
+<article class="fade-in">
+  {{ content }}
+</article>
+
+<section class="rule">
+  <span class="line"></span>
+  <span class="center"><span class="chev left">‹‹</span><span class="star">✷</span><span class="chev right">››</span></span>
+  <span class="line"></span>
+</section>

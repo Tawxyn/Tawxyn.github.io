@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/style.css" | relative_url }}" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .ascii-block { display: grid; place-items: center; margin: 1rem 0 1.4rem; }
+    .ascii-block pre {
+      white-space: pre; user-select: none;
+      line-height: 1.05; letter-spacing: 0.25px;
+      color: var(--accent-color);
+      text-shadow: 0 0 10px color-mix(in oklab, var(--accent-color) 40%, transparent);
+      font-size: clamp(10px, 1.2vw, 14px);
+    }
+  </style>
+</head>
+<body class="night">
+  <header class="fade-in navbar-container">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="{{ "/index.html"    | relative_url }}">Home</a></li>
+        <li><a href="{{ "/about.html"    | relative_url }}">About Me</a></li>
+        <li><a href="{{ "/books.html"    | relative_url }}">Favorite Books</a></li>
+        <li><a href="{{ "/devblog/"      | relative_url }}">Devblog</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">☀️</button>
+    </nav>
+  </header>
+
+  <main class="fade-in-container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <ul class="footer-links">
+        <li><a href="{{ "/about.html" | relative_url }}">About Me</a></li>
+        <li><a href="{{ "/books.html" | relative_url }}">Favorite Books</a></li>
+        <li><a href="{{ "/devblog/"   | relative_url }}">Devblog</a></li>
+        <li class="sep">•</li>
+        <li><a href="https://www.linkedin.com/in/oleshchukmike/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://x.com/MikeOleshchuk" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://github.com/Tawxyn" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelector('.navbar-container')?.classList.add('loaded');
+      document.querySelectorAll('.fade-in-name').forEach((el, i) =>
+        setTimeout(() => el.classList.add('loaded'), i * 200)
+      );
+      document.querySelectorAll('.fade-in:not(.fade-in-name)').forEach((el, i) =>
+        setTimeout(() => el.classList.add('loaded'), 500 + i * 150)
+      );
+    });
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('day');
+      document.body.classList.toggle('night');
+      toggleBtn.textContent = document.body.classList.contains('day') ? '🌙' : '☀️';
+    });
+    (function(){
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      document.querySelectorAll('.spinner').forEach(el=>{
+        const frames=['|','/','—','\\']; let i=0;
+        setInterval(()=>{ el.textContent = frames[i=(i+1)%frames.length]; },120);
+      });
+    })();
+  </script>
+</body>
+</html>

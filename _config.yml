@@ -1,0 +1,23 @@
+title: "Mike Oleshchuk"
+url: "https:mikeoleshchuk.com"
+baseurl: ""
+markdown: kramdown
+highlighter: rouge
+theme: null
+permalink: /devblog/:year/:month/:day/:title/
+paginate: 10
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  # For classic numbered pagination (optional):
+  # - jekyll-paginate
+
+include:
+  - assets
+  - style.css
+
+collections:
+  posts:
+    output: true
+    permalink: /devblog/:year/:month/:day/:title/
