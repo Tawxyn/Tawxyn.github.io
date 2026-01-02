@@ -17,7 +17,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body.night .title { color: #ffffff !important; }
+.night .title { color: #ffffff !important; }
 
 body, p, h1, h2, .timeline-item, .details, .company, .title-date, .bio-text, .title {
   font-family: 'IBM Plex Mono', monospace;
@@ -27,15 +27,15 @@ body, p, h1, h2, .timeline-item, .details, .company, .title-date, .bio-text, .ti
 
 html, body { height: 100%; line-height: 1.6; }
 
-/* Theme variables */
-body.night {
+/* Theme variables - applied on html for instant load */
+.night, .night body {
   background-color: var(--bg-color-night);
   color: var(--light-text-color-night);
   --primary-text: var(--primary-text-night);
   --secondary-text: var(--secondary-text-night);
   --accent-color: var(--accent-night);
 }
-body.day {
+.day, .day body {
   background-color: var(--bg-color-day);
   color: var(--light-text-color-day);
   --primary-text: var(--primary-text-day);
@@ -61,19 +61,19 @@ header { padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; background-
   cursor: pointer;
   transition: all 0.25s ease;
 }
-body.night .theme-btn {
+.night .theme-btn {
   background-color: #ffffff;
   color: #000000;
 }
-body.night .theme-btn:hover {
+.night .theme-btn:hover {
   background-color: var(--accent-color);
   color: #000000;
 }
-body.day .theme-btn {
+.day .theme-btn {
   background-color: #000000;
   color: #ffffff;
 }
-body.day .theme-btn:hover {
+.day .theme-btn:hover {
   background-color: var(--accent-color);
   color: #ffffff;
 }
@@ -166,6 +166,81 @@ section { margin-bottom: 2rem; }
   .fade-in, .fade-in-name, .navbar-container { transition: none; }
   .rule .chev { animation: none; }
 }
+
+/* Code blocks & syntax highlighting */
+pre, code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9em;
+}
+code {
+  background: color-mix(in oklab, var(--accent-color) 10%, transparent);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+pre {
+  background: #0d0d0d;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+pre code {
+  background: none;
+  padding: 0;
+}
+.highlight { background: #0d0d0d; border-radius: 6px; }
+.highlight pre { margin: 0; border: none; }
+
+/* Rouge syntax highlighting - matches theme */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp,
+.highlight .kr, .highlight .kt { color: #c792ea; } /* keywords */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb,
+.highlight .sc, .highlight .sd, .highlight .se, .highlight .sh,
+.highlight .sx { color: #c3e88d; } /* strings */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cp,
+.highlight .cs { color: #546e7a; font-style: italic; } /* comments */
+.highlight .n, .highlight .na, .highlight .nb, .highlight .nc,
+.highlight .nd, .highlight .ne, .highlight .nf, .highlight .ni,
+.highlight .nl, .highlight .nn, .highlight .no, .highlight .nt,
+.highlight .nv { color: #82aaff; } /* names/functions */
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi,
+.highlight .mo, .highlight .il { color: #f78c6c; } /* numbers */
+.highlight .o, .highlight .ow { color: #89ddff; } /* operators */
+.highlight .p { color: #89ddff; } /* punctuation */
+.highlight .gd { color: #ff5370; } /* diff deleted */
+.highlight .gi { color: #c3e88d; } /* diff inserted */
+
+/* ASCII block */
+.ascii-block { display: grid; place-items: center; margin: 1rem 0 1.4rem; }
+.ascii-block pre {
+  white-space: pre; user-select: none;
+  line-height: 1.05; letter-spacing: 0.25px;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px color-mix(in oklab, var(--accent-color) 40%, transparent);
+  font-size: clamp(10px, 1.2vw, 14px);
+}
+
+/* Books list */
+.books-list { margin: 0 0 1.5rem; }
+.books-list h2 {
+  font-size: 1.1rem; font-weight: 300; color: var(--primary-text);
+  margin-bottom: .6rem;
+}
+.books {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: .35rem;
+}
+.books li {
+  display: flex; align-items: baseline; gap: .5rem;
+  color: var(--secondary-text);
+}
+.book-title {
+  color: var(--primary-text);
+  letter-spacing: .02em;
+}
+.book-sep { opacity: .5; }
+.book-tag { opacity: .8; font-size: .9em; }
 
 /* Responsive */
 @media (max-width: 600px) {

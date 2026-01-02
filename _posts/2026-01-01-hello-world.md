@@ -5,7 +5,8 @@ tags: [intro]
 description: "Spinning up a Jekyll blog on GitHub Pages with my own HTML/CSS."
 ---
 
-This is my first post. Code blocks get highlighted:
+This is my first post & test.
 
 ```js
-console.log("hi mike");
+console.log("hi everyone");
+```
